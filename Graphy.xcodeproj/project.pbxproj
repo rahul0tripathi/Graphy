@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A7D85A72859220E00716E91 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D85A62859220E00716E91 /* main.cpp */; };
+		2A7D85AF2859233200716E91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7D85AE2859233200716E91 /* OpenGL.framework */; };
+		2A7D85B12859233E00716E91 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7D85B02859233E00716E91 /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,12 @@
 /* Begin PBXFileReference section */
 		2A7D85A32859220E00716E91 /* Graphy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Graphy; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7D85A62859220E00716E91 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2A7D85AE2859233200716E91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		2A7D85B02859233E00716E91 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		2A7D85B6285946C700716E91 /* render.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = render.h; sourceTree = "<group>"; };
+		2A7D85B92859471500716E91 /* csv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = csv.h; sourceTree = "<group>"; };
+		2A7D85BA285947B000716E91 /* setup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = setup.h; sourceTree = "<group>"; };
+		2A7D85C6285951E400716E91 /* reshape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = reshape.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7D85B12859233E00716E91 /* GLUT.framework in Frameworks */,
+				2A7D85AF2859233200716E91 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +53,7 @@
 			children = (
 				2A7D85A52859220E00716E91 /* Graphy */,
 				2A7D85A42859220E00716E91 /* Products */,
+				2A7D85AD2859233200716E91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +68,54 @@
 		2A7D85A52859220E00716E91 /* Graphy */ = {
 			isa = PBXGroup;
 			children = (
-				2A7D85A62859220E00716E91 /* main.cpp */,
+				2A7D85BD285948CD00716E91 /* lib */,
+				2A7D85B5285945EE00716E91 /* src */,
+				2A7D85B4285945D900716E91 /* include */,
 			);
 			path = Graphy;
+			sourceTree = "<group>";
+		};
+		2A7D85AD2859233200716E91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A7D85B02859233E00716E91 /* GLUT.framework */,
+				2A7D85AE2859233200716E91 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A7D85B4285945D900716E91 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				2A7D85B8285946DC00716E91 /* datasource */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		2A7D85B5285945EE00716E91 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2A7D85A62859220E00716E91 /* main.cpp */,
+				2A7D85B6285946C700716E91 /* render.h */,
+				2A7D85BA285947B000716E91 /* setup.h */,
+				2A7D85C6285951E400716E91 /* reshape.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2A7D85B8285946DC00716E91 /* datasource */ = {
+			isa = PBXGroup;
+			children = (
+				2A7D85B92859471500716E91 /* csv.h */,
+			);
+			path = datasource;
+			sourceTree = "<group>";
+		};
+		2A7D85BD285948CD00716E91 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +221,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -223,7 +279,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -243,6 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V876LS74F;
 				ENABLE_HARDENED_RUNTIME = YES;
+				OTHER_CFLAGS = "-Wno-deprecated";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -253,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V876LS74F;
 				ENABLE_HARDENED_RUNTIME = YES;
+				OTHER_CFLAGS = "-Wno-deprecated";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
