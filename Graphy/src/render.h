@@ -8,10 +8,11 @@
 #include "./bar/bargraph.h"
 #include "./scatter/scatter.h"
 #include "../include/datasource/csv.h"
+#include "keyboard.h"
 initConfig config;
 parsedCsvBarData dataset;
 void loadDataAndRender(){
-    switch (config.type) {
+    switch (type) {
         case bar:
             renderBarGraph(dataset);
             break;
@@ -25,6 +26,7 @@ void loadDataAndRender(){
 }
 void persistConfig(initConfig init){
     config = init;
+    type = config.type;
     dataset = parseCsvBarData(config.filePath);
 }
 
@@ -34,3 +36,4 @@ void display(){
     glutPostRedisplay();
     glutSwapBuffers();
 }
+

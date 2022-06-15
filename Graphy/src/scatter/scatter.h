@@ -22,7 +22,7 @@ void renderScatterGraph(parsedCsvBarData data){
     glPointSize(5.0f);
     glBegin(GL_POINTS);
     for (k = 0; k < data.values.size(); k++)
-        glVertex2i (40 + k*50, (yRaster + data.values[k]));
+        glVertex2i (20 + k*10, (yRaster + data.values[k]));
     glEnd();
     glColor3f (1.0, 1.0, 1.0);
     xRaster = 20;
@@ -32,7 +32,7 @@ void renderScatterGraph(parsedCsvBarData data){
         sprintf(buffer,"%d",data.values[m]);
         for (k = 0; k < 3; k++)
             glutBitmapCharacter (GLUT_BITMAP_HELVETICA_12,(GLubyte)buffer[k]);
-        xRaster += 50;
+        xRaster += 10;
     }
 }
 

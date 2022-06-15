@@ -9,12 +9,13 @@
 #include "setup.h"
 #include "render.h"
 #include "reshape.h"
+#include "keyboard.h"
 int main (int argc, char** argv){
     initConfig config = {
         (char*)"Graphy", // window name
         getWindowSize(), // get default window sizes
         true, // set full screen to false
-        (char*)"/Users/ats/Desktop/github/Graphy/Graphy/sample/sample.csv", // filepath
+        (char*)"/Users/ats/Desktop/github/Graphy/Graphy/sample/dense.csv", // filepath
         scatter
     };
     setupGLUT(argc, argv,config);
@@ -22,6 +23,7 @@ int main (int argc, char** argv){
     persistConfig(config);
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
+    glutKeyboardFunc(windowKey);
     glutMainLoop();
     return 0;
 }

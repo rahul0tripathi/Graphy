@@ -37,6 +37,7 @@
 		2A7D85CB2859646600716E91 /* sample.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = sample.csv; sourceTree = "<group>"; };
 		2A7D85CD2859A8F900716E91 /* scatter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = scatter.h; sourceTree = "<group>"; };
 		2A7D85CE2859AE2E00716E91 /* dense.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = dense.csv; sourceTree = "<group>"; };
+		2A7D85D02859B64300716E91 /* keyboard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = keyboard.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 				2A7D85B6285946C700716E91 /* render.h */,
 				2A7D85BA285947B000716E91 /* setup.h */,
 				2A7D85C6285951E400716E91 /* reshape.h */,
+				2A7D85D02859B64300716E91 /* keyboard.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
