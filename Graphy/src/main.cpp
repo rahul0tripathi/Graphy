@@ -13,10 +13,12 @@ int main (int argc, char** argv){
     initConfig config = {
         (char*)"Graphy", // window name
         getWindowSize(), // get default window sizes
-        false // set full screen to false
+        true, // set full screen to false
+        (char*)"/Users/ats/Desktop/github/Graphy/Graphy/sample/sample.csv" // filepath
     };
     setupGLUT(argc, argv,config);
     init(config);
+    persistConfig(config);
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutMainLoop();

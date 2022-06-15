@@ -15,6 +15,7 @@ struct initConfig {
     char* title;
     windowSize size;
     bool isFullScreen;
+    char* filePath;
 };
 windowSize getWindowSize() {
     windowSize defaultConfig = {(glutGet(GLUT_SCREEN_WIDTH) == 0) ? 1000 : glutGet(GLUT_SCREEN_WIDTH),(glutGet(GLUT_SCREEN_HEIGHT) == 0) ? 1000 : glutGet(GLUT_SCREEN_HEIGHT)};
@@ -36,7 +37,7 @@ void setupGLUT(int argc,char** argv,initConfig conf){
 }
 
 void init(initConfig conf){
-    glClearColor(0.412f, 0.412f, 0.412f,0.0f);
+    glClearColor(0.0f, 0.0f, 0.0f,0.0f);
     glMatrixMode (GL_PROJECTION);
     gluOrtho2D (0.0,conf.size.width,0.0,conf.size.height);
 }

@@ -5,7 +5,7 @@
 #else
 #include <GL/glut.h>
 #endif
-void reshape (int w, int h)
+void reshape(int w, int h)
 {
    //Put Resizing Code Here
 
