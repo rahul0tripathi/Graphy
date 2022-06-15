@@ -4,12 +4,24 @@
 #else
 #include <GL/glut.h>
 #endif
+#include "iostream"
 #include "./bar/bargraph.h"
+#include "./scatter/scatter.h"
 #include "../include/datasource/csv.h"
 initConfig config;
 parsedCsvBarData dataset;
 void loadDataAndRender(){
-    renderBarGraph(dataset);
+    switch (config.type) {
+        case bar:
+            renderBarGraph(dataset);
+            break;
+        case scatter:
+            renderScatterGraph(dataset);
+            break;
+        default:
+            std::cout<<"invalid graph type "<<config.type;
+            break;
+    }
 }
 void persistConfig(initConfig init){
     config = init;

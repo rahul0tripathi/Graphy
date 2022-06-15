@@ -35,6 +35,8 @@
 		2A7D85C6285951E400716E91 /* reshape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = reshape.h; sourceTree = "<group>"; };
 		2A7D85C92859590900716E91 /* bargraph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = bargraph.h; sourceTree = "<group>"; };
 		2A7D85CB2859646600716E91 /* sample.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = sample.csv; sourceTree = "<group>"; };
+		2A7D85CD2859A8F900716E91 /* scatter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = scatter.h; sourceTree = "<group>"; };
+		2A7D85CE2859AE2E00716E91 /* dense.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = dense.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		2A7D85B5285945EE00716E91 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2A7D85CC2859A8E300716E91 /* scatter */,
 				2A7D85C8285958EA00716E91 /* bar */,
 				2A7D85A62859220E00716E91 /* main.cpp */,
 				2A7D85B6285946C700716E91 /* render.h */,
@@ -134,8 +137,17 @@
 			isa = PBXGroup;
 			children = (
 				2A7D85CB2859646600716E91 /* sample.csv */,
+				2A7D85CE2859AE2E00716E91 /* dense.csv */,
 			);
 			path = sample;
+			sourceTree = "<group>";
+		};
+		2A7D85CC2859A8E300716E91 /* scatter */ = {
+			isa = PBXGroup;
+			children = (
+				2A7D85CD2859A8F900716E91 /* scatter.h */,
+			);
+			path = scatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

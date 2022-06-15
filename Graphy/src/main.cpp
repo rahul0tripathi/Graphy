@@ -14,7 +14,8 @@ int main (int argc, char** argv){
         (char*)"Graphy", // window name
         getWindowSize(), // get default window sizes
         true, // set full screen to false
-        (char*)"/Users/ats/Desktop/github/Graphy/Graphy/sample/sample.csv" // filepath
+        (char*)"/Users/ats/Desktop/github/Graphy/Graphy/sample/sample.csv", // filepath
+        scatter
     };
     setupGLUT(argc, argv,config);
     init(config);

@@ -11,11 +11,13 @@ struct windowSize {
     GLint width;
     GLint height;
 };
+enum graphType{ bar,scatter};
 struct initConfig {
     char* title;
     windowSize size;
     bool isFullScreen;
     char* filePath;
+    graphType type;
 };
 windowSize getWindowSize() {
     windowSize defaultConfig = {(glutGet(GLUT_SCREEN_WIDTH) == 0) ? 1000 : glutGet(GLUT_SCREEN_WIDTH),(glutGet(GLUT_SCREEN_HEIGHT) == 0) ? 1000 : glutGet(GLUT_SCREEN_HEIGHT)};
